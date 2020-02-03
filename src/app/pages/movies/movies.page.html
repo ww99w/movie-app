@@ -17,12 +17,13 @@
     </ion-select> -->
 
     <mat-form-field>
-      <mat-label>Ionites</mat-label>
+      <mat-label>Select Searchtype</mat-label>
       <mat-select [(ngModel)]="ionite" name="ionite">
-        <mat-option value="">All</mat-option>
-        <mat-option value="movie">Movie</mat-option>
+        <!-- <mat-option value="">All</mat-option> -->
+        <mat-option *ngFor="let type of types" [value]="type.id">{{type.name}}</mat-option>
+        <!-- <mat-option value="movie">Movie</mat-option>
         <mat-option value="series">Series</mat-option>
-        <mat-option value="episode">Episode</mat-option>
+        <mat-option value="episode">Episode</mat-option> -->
       </mat-select>
     </mat-form-field>
   </ion-item>
